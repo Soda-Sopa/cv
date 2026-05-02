@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Павел Корешков — Senior Project Manager / Technical Business Analyst</title>
+  <meta name="description" content="Резюме-сайт Павла Корешкова: Senior Project Manager / Technical Business Analyst в FinTech, Payments и API Integrations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f2eb;
+      --paper:#fffdf8;
+      --paper-soft:#faf7ef;
+      --ink:#111827;
+      --muted:#667085;
+      --muted-2:#8a93a3;
+      --line:#e4ded2;
+      --accent:#25412c;
+      --accent-2:#d7b56d;
+      --accent-soft:#e8efe8;
+      --shadow:0 28px 80px rgba(17,24,39,.11);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(215,181,109,.18), transparent 34%),
+        radial-gradient(circle at 88% 8%, rgba(37,65,44,.14), transparent 30%),
+        var(--bg);
+      color:var(--ink);
+      font-family:'Manrope',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:geometricPrecision;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:34px 0 52px}
+    .site-card{
+      background:rgba(255,253,248,.88);
+      border:1px solid rgba(228,222,210,.9);
+      border-radius:36px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      backdrop-filter:blur(18px);
+    }
+
+    .hero{
+      position:relative;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 360px;
+      gap:44px;
+      padding:58px;
+      background:
+        linear-gradient(135deg, rgba(255,253,248,.98), rgba(250,247,239,.88)),
+        linear-gradient(90deg, rgba(37,65,44,.08), transparent);
+      border-bottom:1px solid var(--line);
+    }
+
+
+    .eyebrow{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      color:var(--accent);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:22px;
+    }
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--accent)}
+
+    h1{
+      margin:0;
+      max-width:780px;
+      font-size:clamp(52px,7.4vw,92px);
+      line-height:.91;
+      letter-spacing:-.075em;
+      font-weight:800;
+    }
+
+    .headline{
+      margin:28px 0 0;
+      max-width:820px;
+      color:#2f3a4a;
+      font-size:22px;
+      line-height:1.46;
+      letter-spacing:-.02em;
+      font-weight:600;
+    }
+
+    .summary{
+      margin:22px 0 0;
+      max-width:850px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.78;
+    }
+
+    .contact-card{
+      position:relative;
+      z-index:1;
+      align-self:start;
+      background:var(--accent);
+      color:#eef6ee;
+      border-radius:24px;
+      padding:30px;
+      box-shadow:0 18px 46px rgba(37,65,44,.22);
+    }
+
+    .contact-card h2{margin:0 0 22px;color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+    .contact-item{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+    .contact-item:last-child{border-bottom:0;padding-bottom:0}
+    .contact-label{display:block;color:rgba(255,255,255,.62);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}
+    .contact-value{display:block;color:#fff;font-size:14px;font-weight:650;word-break:break-word}
+
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1px;
+      background:var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .metric{background:rgba(255,253,248,.74);padding:24px 30px}
+    .metric strong{display:block;font-size:26px;line-height:1;font-weight:800;color:var(--accent);letter-spacing:-.04em}
+    .metric span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:650}
+
+    .section{
+      display:grid;
+      grid-template-columns:260px minmax(0,1fr);
+      gap:42px;
+      padding:46px 58px;
+      border-bottom:1px solid var(--line);
+    }
+    .section:last-child{border-bottom:0}
+    .section-title{position:sticky;top:24px;align-self:start}
+    .section-title h2{margin:0;color:var(--accent);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+    .section-title p{margin:12px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+
+    .positioning{
+      border-left:4px solid var(--accent);
+      background:linear-gradient(90deg,var(--accent-soft),rgba(232,239,232,.38));
+      padding:26px 30px;
+      border-radius:0 22px 22px 0;
+      color:#344239;
+      font-size:17px;
+      line-height:1.78;
+      font-weight:550;
+    }
+
+    .expertise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .skill-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:20px;
+      min-height:154px;
+    }
+    .skill-card h3{margin:0 0 10px;font-size:15px;letter-spacing:-.01em;color:var(--ink)}
+    .skill-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+
+    .timeline{position:relative}
+    .job{
+      position:relative;
+      padding:0 0 32px 30px;
+      margin:0 0 32px;
+      border-bottom:1px solid var(--line);
+    }
+    .job:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+    .job:before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:10px;
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(37,65,44,.09);
+    }
+    .job:after{
+      content:"";
+      position:absolute;
+      left:4px;
+      top:28px;
+      bottom:-18px;
+      width:1px;
+      background:var(--line);
+    }
+    .job:last-child:after{display:none}
+
+    .job-head{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:22px;
+      align-items:start;
+      margin-bottom:7px;
+    }
+    .job h3{margin:0;font-size:26px;line-height:1.16;letter-spacing:-.045em;font-weight:800}
+    .period{
+      display:inline-flex;
+      justify-content:flex-end;
+      color:var(--accent);
+      background:rgba(37,65,44,.08);
+      border:1px solid rgba(37,65,44,.12);
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+    .role{color:#4b5565;font-size:14px;font-weight:750;margin-bottom:15px}
+    .company-note{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.7}
+    ul{margin:0;padding-left:20px;color:#344054;font-size:14px;line-height:1.72}
+    li{margin:8px 0}
+    li::marker{color:var(--accent)}
+
+    .education-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px;
+    }
+    .education-card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.03em}
+    .education-card p{margin:0;color:var(--muted);font-size:14px}
+
+    .footer{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      padding:26px 58px;
+      color:var(--muted-2);
+      font-size:12px;
+      border-top:1px solid var(--line);
+      background:rgba(250,247,239,.6);
+    }
+
+    .skill-tags{
+      grid-column:1/-1;
+      color:var(--muted);
+      font-size:13px;
+      line-height:2.1;
+      letter-spacing:.01em;
+    }
+
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr;padding:38px}
+      .metrics{grid-template-columns:repeat(2,1fr)}
+      .section{grid-template-columns:1fr;padding:38px}
+      .section-title{position:static}
+      .expertise-grid{grid-template-columns:repeat(2,1fr)}
+      .job-head{grid-template-columns:1fr}.period{justify-self:start}
+    }
+
+    @media(max-width:640px){
+      .shell{width:min(100% - 20px,1180px);padding:10px 0 28px}
+      .site-card{border-radius:24px}
+      .hero{padding:28px}
+      .contact-card{padding:24px;border-radius:20px}
+      .metrics{grid-template-columns:1fr}
+      .section{padding:30px 24px;gap:24px}
+      .expertise-grid{grid-template-columns:1fr}
+      .job{padding-left:24px}.job h3{font-size:22px}
+      .footer{padding:24px;display:block}.footer span{display:block;margin-top:8px}
+    }
+
+    @media print{
+      body{background:#fff}.shell{width:100%;padding:0}.site-card{box-shadow:none;border:0;border-radius:0}.hero,.section,.footer{padding:24px}.contact-card{box-shadow:none}.section-title{position:static}.skill-card,.education-card,.job{break-inside:avoid}.metrics{display:none}a{text-decoration:none;color:inherit}
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="site-card">
+      <header class="hero">
+        <div>
+          <div class="eyebrow">Executive Resume</div>
+          <h1>Павел Корешков</h1>
+          <p class="headline">Senior Project Manager / Technical Business Analyst с фокусом на FinTech, платежные интеграции, API и delivery governance.</p>
+          <p class="summary">Управляю сложным delivery на стыке бизнеса, провайдеров, банков, compliance, security и разработки — от discovery, API-анализа и согласования требований до валидации, документации и production release.</p>
+        </div>
+        <aside class="contact-card" aria-label="Контактная информация">
+          <h2>Контакты</h2>
+          <div class="contact-item"><span class="contact-label">Локация</span><span class="contact-value">Da Nang, Vietnam</span></div>
+          <div class="contact-item"><span class="contact-label">Телефон</span><a class="contact-value" href="tel:+9779823623033">+84 0337175587</a></div>
+          <div class="contact-item"><span class="contact-label">Email</span><a class="contact-value" href="mailto:4198899@gmail.com">4198899@gmail.com</a></div>
+          <div class="contact-item"><span class="contact-label">Telegram</span><a class="contact-value" href="https://t.me/pablo_elpasa">t.me/pablo_elpasa</a></div>
+          <div class="contact-item"><span class="contact-label">LinkedIn</span><a class="contact-value" href="https://linkedin.com/in/pavel-koreshkov">linkedin.com/in/pavel-koreshkov</a></div>
+          <div class="contact-item"><span class="contact-label">Website</span><a class="contact-value" href="https://pavel-koreshkov.tilda.ws/cv">pavel-koreshkov.me</a></div>
+        </aside>
+      </header>
+      <section class="metrics" aria-label="Ключевые акценты">
+        <div class="metric"><strong>7+ лет</strong><span>Project & product delivery</span></div>
+        <div class="metric"><strong>FinTech</strong><span>Payments, PSP, gateways</span></div>
+        <div class="metric"><strong>API</strong><span>Анализ, валидация, релизы</span></div>
+        <div class="metric"><strong>Cross-team</strong><span>Business, QA, security, vendors</span></div>
+      </section>
+      <section class="section">
+        <div class="section-title"><h2>Профессиональный профиль</h2><p></p></div>
+        <div class="positioning">Senior Project Manager и Technical Business Analyst с 7+ годами опыта в IT, fintech, платежных интеграциях, enterprise-разработке, web-сервисах, AI / Computer Vision, Web3, автоматизации и release management. Основной фокус — delivery платежных продуктов, PSP и payment gateway интеграции, системная и техническая аналитика, API-интеграции, координация провайдеров, compliance / certification support и управление cross-functional командами от discovery до production release. Сильная сторона — перевод бизнес-требований, требований провайдеров и технических ограничений в спецификации, backlog, acceptance criteria, тестовые сценарии, интеграционную документацию и release scope.</div>
+      </section>
+      <section class="section">
+        <div class="section-title"><h2>Ключевая экспертиза</h2><p>Платежное delivery, техническая аналитика, API-валидация и операционное управление.</p></div>
+        <div class="expertise-grid">
+          <article class="skill-card"><h3>FinTech Delivery</h3><p>PSP, payment gateway, pay-in/pay-out flows, payment products и payment provider integrations.</p></article>
+          <article class="skill-card"><h3>Payment Patterns</h3><p>H2H, HPP, hybrid flows, redirect-based scenarios, callbacks и webhook transaction updates.</p></article>
+          <article class="skill-card"><h3>Technical Business Analysis</h3><p>API-документация, payment flows, спецификации, acceptance criteria и integration notes.</p></article>
+          <article class="skill-card"><h3>Compliance Coordination</h3><p>Apple Pay, Google Pay, Samsung Pay и PCI DSS-related readiness support.</p></article>
+          <article class="skill-card"><h3>Postman Validation</h3><p>Environments, credentials, headers, payloads, endpoint configuration и smoke testing.</p></article>
+          <article class="skill-card"><h3>Delivery Governance</h3><p>Agile, Scrum, Kanban, Jira, Confluence, backlog management, sprint planning и release readiness.</p></article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title"><h2>Опыт работы</h2><p></p></div>
+        <div class="timeline">
+          <article class="job"><div class="job-head"><h3>Denaro Payment System</h3><span class="period">Апрель 2025 — настоящее время</span></div><div class="role">Senior Project Manager / Technical Business Analyst — Dubai, United Arab Emirates</div><ul><li>Управляю delivery финтех-продуктов и платежных интеграций: PSP, payment gateway, pay-in/pay-out flows, H2H, HPP, hybrid payment flows, redirect-based scenarios, callbacks и webhook-based transaction updates.</li><li>Координирую интеграции с payment-провайдерами, банками и wallet-экосистемами, включая Apple Pay, Google Pay и Samsung Pay.</li><li>Участвую в compliance / certification-процессах: подготовка технических артефактов, согласование требований, валидация платежных сценариев, взаимодействие с development, QA, compliance, security-командами и внешними партнерами.</li><li>Работаю с PCI DSS-related задачами: координирую сбор технической информации, подготовку требований, контроль выполнения задач и готовность платежной инфраструктуры к проверкам и сертификации.</li><li>Анализирую API-документацию провайдеров, payment flows, authorization logic, payload structure, transaction statuses, callback / webhook logic, error handling и edge cases.</li><li>Самостоятельно провожу smoke-тестирование API-интеграций в Postman: настраиваю окружения, credentials, headers, request body, endpoint configuration и проверяю pay-in / pay-out сценарии.</li><li>Фиксирую результаты технической проверки в виде integration notes, bug reports, acceptance criteria, тестовых сценариев и задач для разработки.</li><li>Отвечал за внутреннюю операционную трансформацию: перевел компанию около 60 человек в Slack, спроектировал структуру каналов и правила коммуникации, перестроил workflow технической команды и обновил Kanban-процесс.</li></ul></article>
+          <article class="job"><div class="job-head"><h3>Medialine Group</h3><span class="period">Сентябрь 2024 — Май 2025</span></div><div class="role">Senior Project Manager — Москва</div><ul><li>Возглавлял внедрение практик Agile в командах разработки, что позволило оптимизировать циклы поставки и повысить прозрачность delivery.</li><li>Управлял сложными IT-проектами и внедрял индивидуальные технологические решения для корпоративных клиентов, включая «Балтику», «Норникель», «Росатом» и «Юнипро».</li><li>Координировал работу разработки, аналитики, дизайна, QA, менеджмента и клиентских stakeholders; контролировал scope, риски, сроки, коммуникации и изменения.</li><li><strong>Балтика:</strong> реализовал корпоративный образовательный портал к 30-летию компании с интерактивными учебными модулями, таймлайном истории компании, механиками добрых дел и благотворительных акций.</li><li><strong>Юнипро:</strong> спроектировал и развернул платформу корпоративной геймификации для повышения мотивации персонала и вовлеченности во внутренние системы.</li><li><strong>Газпром:</strong> реализовал AI / Computer Vision pipeline для распознавания промышленных документов: GAN-based очистка и восстановление, точность распознавания 94%, сокращение ручной обработки более чем на 70%, deployment в защищенном закрытом контуре.</li></ul></article>
+          <article class="job"><div class="job-head"><h3>Philin Philgood</h3><span class="period">Сентябрь 2023 — Декабрь 2024</span></div><div class="role">Lead Project Manager — Москва, Россия</div><ul><li>Руководил web-разработкой и созданием заказных digital-продуктов для благотворительных фондов, НКО и крупного бизнеса, включая РЖД, Siemens, Райффайзен Банк и других enterprise-клиентов.</li><li>Основной фокус проектов: фармацевтика, здравоохранение, банковский сектор, корпоративные web-сервисы и digital-продукты.</li><li>Руководил полным циклом delivery: от брифа, оценки, сбора требований и планирования до релиза, приемки, документации и закрытия проекта.</li><li>Собрал и ввел в работу 4 новые команды разработки численностью 5–7 человек каждая; управлял несколькими параллельными проектами для enterprise-клиентов.</li><li>Внедрил Kanban-подход в Jira, что повысило прозрачность задач, учет времени, контроль загрузки и движение задач по workflow.</li><li>Перестроил проектные процессы с опорой на практики PMBOK: инициация, планирование, исполнение, контроль, управление рисками, коммуникации и закрытие проектов.</li><li>Планировал спринты, проводил Scrum-церемонии, Planning Poker, работал с User Story, проводил CustDev-интервью, ретроспективы, demo-встречи с заказчиками и регулярные синхронизации.</li><li>Вел проектную документацию: устав проекта, briefing, договор, коммерческое предложение, техническое задание, функциональные требования, Definition of Ready, Definition of Done, acceptance criteria, счета, акты, Consensus Report, диаграммы Ганта, реестр рисков, roadmap, план коммуникаций, протоколы Daily и Retro.</li></ul></article>
+          <article class="job"><div class="job-head"><h3>LUMIUM</h3><span class="period">Январь 2023 — Август 2023</span></div><div class="role">Chief Operating Officer — Czech Republic</div><ul><li>Руководил операционной деятельностью Web3-стартапа, который разрабатывал браузерный продукт, и довел проект до стадии MVP.</li><li>Внедрил Agile и Scrum-подходы, перестроил процессы разработки, проводил daily stand-ups, ретроспективы, demo, brainstorming sessions и работу с user stories.</li><li>Создал систему внутренней коммуникации, настроил Kanban-доски в Atlassian Jira, развернул локальные Git-серверы для CI / CD процессов и обучил сотрудников Gitflow.</li><li>Подготовил документацию, регламенты, операционные процедуры и систему мотивации, вознаграждений и ответственности.</li><li>Занимался наймом и onboarding сотрудников, подготовил проект к продаже инвесторам и привлечению pre-seed финансирования.</li></ul></article>
+          <article class="job"><div class="job-head"><h3>AppCake</h3><span class="period">Февраль 2022 — Январь 2023</span></div><div class="role">Project Management Officer — United States</div><ul><li>Возглавлял отдел release managers в американо-китайской компании, выпускавшей более 150 мобильных приложений и игр в месяц.</li><li>Руководил двумя командами общей численностью около 30 человек в русскоязычной и англоязычной среде.</li><li>Оптимизировал release workflow и ввел новые статусы задач, что повысило эффективность департамента примерно на 30% релизов в месяц.</li><li>Работал с reject-письмами от Apple App Store и Google Play, координировал исправления с руководителями разработки и QA-департаментом, контролировал release readiness.</li><li>Нанимал и адаптировал новых сотрудников, включая англоговорящих специалистов из Африки, Индии, Вьетнама и Китая.</li><li>Организовывал ежедневные Scrum-церемонии, участвовал в ретроспективах, вел проектную документацию, инструкции и регламенты для новых сотрудников.</li></ul></article>
+          <article class="job"><div class="job-head"><h3>WeLoveRobots</h3><span class="period">Июль 2020 — Февраль 2022</span></div><div class="role">Project Manager — Москва, Россия</div><ul><li>Компания занималась производством AI и IVR-роботов для B2B, автоматизацией и CRM-системами.</li><li>Руководил отделом производства и управлял командой 10–15 человек: постановка и контроль задач, сроки, отчетность, спринты, ретроспективы и delivery management.</li><li>Общался с заказчиками, контролировал сроки, согласовывал scope и сопровождал заключение контрактов.</li><li>Использовал EVA — метод освоенного объема — для прогнозирования рисков, а также применял проектный треугольник ограничений: scope, time, cost.</li><li>Вел отчетную и проектную документацию по delivery-процессам.</li></ul></article>
+          <article class="job"><div class="job-head"><h3>SAP</h3><span class="period">Январь 2018 — Февраль 2019</span></div><div class="role">Project Manager / Assistant to Head of Marketing Department — Москва, Россия</div><ul><li>Работал в маркетинговом отделе и отвечал за создание информационных материалов для крупных клиентов, включая Mercedes-Benz, Coca-Cola, McDonald’s и Российские Железные Дороги.</li><li>Участвовал в организации и проведении бизнес-конференций компании, помогал доносить ценностное предложение SAP до клиентов.</li><li>Получил опыт работы с enterprise-клиентами, индивидуальными бизнес-решениями и оптимизацией рабочих процессов для крупных компаний.</li></ul></article>
+        </div>
+      </section>
+      <section class="section"><div class="section-title"><h2>Образование</h2></div><div class="education-card"><h3>Московский государственный институт международных отношений (МГИМО)</h3><p>Бакалавр — психология, социальные науки и менеджмент | Сентябрь 2019 — Август 2022</p><p style="margin-top:10px;color:var(--ink);font-size:14px;font-weight:600;">Английский язык — B1</p></div></section>
+      <section class="section">
+        <div class="section-title"><h2>Навыки</h2><p>Ключевые технологии, методологии и инструменты.</p></div>
+        <div class="skill-tags">Agile Project Management · Проектный менеджмент · Project Management · Scrum · Kanban · PMBOK · Планирование · Планирование бюджета · Диаграмма Ганта · Управление командой · Расстановка приоритетов · Постановка задач разработчикам · Разработка технических заданий · Проектная документация · Заключение договоров · Разработка ПО · Technical Business Analysis · FinTech · PSP · Payment Gateway · Payment Processing · API Integration · H2H · HPP · REST API · Postman · PCI DSS · Compliance · Apple Pay · Google Pay · Samsung Pay · Payment Providers · Bank Integrations · Mobile Top-up · CI/CD · Atlassian Jira · Figma · MS Project · MS Visual Studio</div>
+      </section>
+      <footer class="footer"><strong>Павел Корешков — Senior Project Manager / Technical Business Analyst</strong><span>Business-card</span></footer>
+    </div>
+  </main>
+</body>
+</html>
