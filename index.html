@@ -241,13 +241,25 @@
       background:rgba(250,247,239,.6);
     }
 
-    .skill-tags{
-      grid-column:1/-1;
-      color:var(--muted);
-      font-size:13px;
-      line-height:2.1;
-      letter-spacing:.01em;
-    }
+.skill-tags{
+  grid-column:1/-1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.skill-tags span{
+  display:inline-block;
+  background:rgba(37,65,44,.07);
+  border:1px solid rgba(37,65,44,.13);
+  color:var(--accent);
+  font-size:12px;
+  font-weight:600;
+  line-height:1;
+  padding:6px 12px;
+  border-radius:999px;
+  letter-spacing:.01em;
+  white-space:nowrap;
+}
 
     @media(max-width:980px){
       .hero{grid-template-columns:1fr;padding:38px}
@@ -282,7 +294,7 @@
         <div>
           <div class="eyebrow">Executive Resume</div>
           <h1>Павел Корешков</h1>
-          <p style="margin:10px 0 0;font-size:13px;font-weight:400;color:var(--muted);letter-spacing:.02em;">16.11.1990</p>
+          <p style="margin:10px 0 0;font-size:13px;font-weight:400;color:var(--muted);letter-spacing:.02em;">16.11.1990 (35 лет)</p>
           <p class="headline">Senior Project Manager / Technical Business Analyst с фокусом на FinTech, платежные интеграции, API и delivery governance.</p>
           <p class="summary">Управляю сложным delivery на стыке бизнеса, провайдеров, банков, compliance, security и разработки — от discovery, API-анализа и согласования требований до валидации, документации и production release.</p>
         </div>
@@ -332,8 +344,47 @@
       <section class="section"><div class="section-title"><h2>Образование</h2></div><div class="education-card"><h3>Московский государственный институт международных отношений (МГИМО)</h3><p>Бакалавр — психология, социальные науки и менеджмент | Сентябрь 2019 — Август 2022</p><p style="margin-top:10px;color:var(--ink);font-size:14px;font-weight:600;">Английский язык — B1</p></div></section>
       <section class="section">
         <div class="section-title"><h2>Навыки</h2><p>Ключевые технологии, методологии и инструменты.</p></div>
-        <div class="skill-tags">Agile Project Management · Проектный менеджмент · Project Management · Scrum · Kanban · PMBOK · Планирование · Планирование бюджета · Диаграмма Ганта · Управление командой · Расстановка приоритетов · Постановка задач разработчикам · Разработка технических заданий · Проектная документация · Заключение договоров · Разработка ПО · Technical Business Analysis · FinTech · PSP · Payment Gateway · Payment Processing · API Integration · H2H · HPP · REST API · Postman · PCI DSS · Compliance · Apple Pay · Google Pay · Samsung Pay · Payment Providers · Bank Integrations · Mobile Top-up · CI/CD · Atlassian Jira · Figma · MS Project · MS Visual Studio</div>
-      </section>
+<div class="skill-tags">
+  <span>Agile Project Management</span>
+  <span>Проектный менеджмент</span>
+  <span>Project Management</span>
+  <span>Scrum</span>
+  <span>Kanban</span>
+  <span>PMBOK</span>
+  <span>Планирование</span>
+  <span>Планирование бюджета</span>
+  <span>Диаграмма Ганта</span>
+  <span>Управление командой</span>
+  <span>Расстановка приоритетов</span>
+  <span>Постановка задач разработчикам</span>
+  <span>Разработка технических заданий</span>
+  <span>Проектная документация</span>
+  <span>Заключение договоров</span>
+  <span>Разработка ПО</span>
+  <span>Technical Business Analysis</span>
+  <span>FinTech</span>
+  <span>PSP</span>
+  <span>Payment Gateway</span>
+  <span>Payment Processing</span>
+  <span>API Integration</span>
+  <span>H2H</span>
+  <span>HPP</span>
+  <span>REST API</span>
+  <span>Postman</span>
+  <span>PCI DSS</span>
+  <span>Compliance</span>
+  <span>Apple Pay</span>
+  <span>Google Pay</span>
+  <span>Samsung Pay</span>
+  <span>Payment Providers</span>
+  <span>Bank Integrations</span>
+  <span>Mobile Top-up</span>
+  <span>CI/CD</span>
+  <span>Atlassian Jira</span>
+  <span>Figma</span>
+  <span>MS Project</span>
+  <span>MS Visual Studio</span>
+</div>      </section>
       <footer class="footer"><strong>Павел Корешков — Senior Project Manager / Technical Business Analyst</strong><span>Business-card</span></footer>
     </div>
   </main>
